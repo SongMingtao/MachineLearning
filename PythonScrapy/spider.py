@@ -26,12 +26,15 @@ endYMD = args.e.split('-')
 # url = 'http://op1.win007.com/index_vip.aspx'
 url = 'http://op1.win007.com/bet007history.aspx'
 options = webdriver.ChromeOptions()
+form get
+options.add_argument('--proxy-server=http://171.37.135.94:8123')
 prefs = {
          'download.default_directory': args.d,
          'download.manager.showWhenStarting': False,
          'helperApps.neverAsk.saveToDisk':  True
          }
 options.add_experimental_option('prefs', prefs)
+options.add_argument('')
 driver = webdriver.Chrome(chrome_options=options)
 driver.get(url=url)
 
